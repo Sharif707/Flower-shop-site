@@ -35,76 +35,108 @@ button {
 /* hero section starts here */
 .hero-section {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 68px;
-  flex-wrap: wrap;
   background: rgba(229, 84, 115, 0.1);
 }
-.hero-content {
-  flex-basis: 40%;
-}
-.hero-content > button {
-  border-radius: 8px;
-  color: white;
+.margin-auto {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
 
-  background: rgb(229, 84, 115);
-}
-
-.hero-img {
-  flex: 0 1 35%;
+  gap: 6.5rem;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .hero-header {
-  color: rgb(39, 39, 39);
   font-size: 5.6rem;
+}
+.hero-content {
+  flex: 0 1 600px;
+  border: 2px solid red;
 }
 .hero-content > p {
   color: rgba(39, 39, 39, 0.6);
+
   font-size: 1.8rem;
-  margin: 2.2rem 0;
+
+  line-height: 30px;
+  margin: 2rem 0;
+}
+.hero-content > button {
+  border-radius: 8px;
+
+  background: rgb(229, 84, 115);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 992px) {
   .hero-header {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .hero-content > p {
-    font-size: 1.5rem;
-    margin: 1.4rem 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero-header {
-    font-size: 2.4rem;
-  }
-  .hero-content > p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-}
+    font-size: 1.6rem;
 
-@media screen and (max-width:600px) {
-  .hero-section {
-    flex-direction: column;
-    padding: 20px 25px;
-
-    gap: 40px;
-  }
-  .hero-header {
-    text-align: center;
-  }
-  .hero-img{
-   
-    max-width: 400px;
-    margin: auto;
+    line-height: 26px;
+    margin: 2rem 0;
   }
   .hero-content > button {
-    margin: auto;
-    display: block;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .margin-auto {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .hero-header {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .margin-auto {
+    gap: 2rem;
+  }
+  .hero-header {
+    font-size: 2.5rem;
   }
   .hero-content > p {
-    font-size: 1.3rem;
-    margin: 0.75rem 0;
+    font-size: 1.4rem;
+
+    line-height: 22px;
+    margin: 1.4rem 0;
+  }
+  .hero-content > button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .margin-auto {
+    gap: 1.8rem;
+  }
+  .hero-header {
+    font-size: 2rem;
+  }
+  .hero-content > p {
+    font-size: 1.1rem;
+
+  line-height: 1.6rem;
+    margin: 0.90rem 0;
+  }
+  .hero-content > button {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
   }
 }
